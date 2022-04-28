@@ -9,7 +9,7 @@ body {
 }
 
 .uebung-body {
-	margin-top: 50px !important;
+	margin: 50px !important;
 }
 
 img {
@@ -23,6 +23,7 @@ table {
 /* UEBUNG 1 */
 .img-wrapper {
 	display: flex;
+	justify-content: space-around;
 	align-items: center;
 }
 
