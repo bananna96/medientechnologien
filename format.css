@@ -1,3 +1,25 @@
+html {
+	width: 100vw;
+	height: 100vh !important;
+}
+
+body {
+	margin: 0 !important;
+	height: inherit;
+}
+
+.uebung-body {
+	margin: 50px !important;
+}
+
+img {
+	max-width: 80%;
+}
+
+table {
+	margin: 0 !important;
+}
+
 #Kontakt {
 	position: absolute;
 	top: 4em;
@@ -26,6 +48,7 @@
 }
 
 #Inhalt_1 {
+	height: inherit;
 	position: relative;
 	margin-top: 0em;
 	margin-left: 0em;
@@ -38,29 +61,40 @@
 }
 
 #Navigation {
+	width: 150px;
+	padding: 20px 5px;
 	background-color: #565656;
 	height: 100vh;
-	position: absolute;
-	top: 10em;
-	left: 5em;
+	/* position: absolute; */
 	font: normal 60% Berlin Sans FB;
 }
-
+#Navigation a {
+	margin-left: 15px;
+}
 #Navigation a:link {
 	font: normal 100% Berlin Sans FB;
 	color: #ffffff;
 }
 #Navigation a:visited {
 	font: normal 100% Berlin Sans FB;
-	color: #f5f6ce;
+	color: #969696;
 }
 #Navigation a:hover {
 	font: normal 100% Berlin Sans FB;
-	color: #888888;
+	color: #bdbdbd;
 }
 #Navigation a:active {
 	font: normal 100% Berlin Sans FB;
 	color: #ffffff;
+}
+
+td > hr {
+	width: 150px;
+	color: #969696;
+}
+
+.no-list-dot {
+	list-style: none;
 }
 
 a:link {
@@ -98,7 +132,7 @@ h3 {
 	left: 5em;
 }
 
-h {
+h4 {
 	font: normal 100% Berlin Sans FB;
 	color: #f5f6ce;
 }

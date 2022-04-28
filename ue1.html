@@ -1,48 +1,107 @@
 <html>
-<head>
-<title></title>
-<link rel="stylesheet" type="text/css" href="format.css">
-<style type="text/css">
-        <!--
-                 a:link {font-family:Arial;        font-size:10pt;        text-decoration:none;}
-                a:visited {font-family:Arial; font-size:10pt; text-decoration:none;}
-                a:hover {color:#FF3333; text-decoration:none; font-weight:normal; font-size:10pt;}
-        //-->
-</style>
-</head>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="format.css" />
+	</head>
 
-<body>
+	<body class="uebung-body">
+		<iframe
+               title="u-1"
+			src="oben.html"
+			width="100%"
+			height="120"
+			name="IFrame3"
+			id="IFrame3"
+               style="border: none"
 
-<iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
-         <p>Ihr Browser kann leider keine eingebe5tteten Frames anzeigen:Sie k&ouml;nnen die eingebettete Seite &uuml;ber den
-         folgenden.</p>
-</iframe>
+		>
+			<p>
+				Ihr Browser kann leider keine eingebe5tteten Frames
+				anzeigen:Sie k&ouml;nnen die eingebettete Seite &uuml;ber
+				den folgenden.
+			</p>
+		</iframe>
 
-<h2>Uebung 1</h2>
-<br><h3>Aufgabe 1 - 1.1</h3>
+		<h2>Uebung 1</h2>
+		<br />
+		<h3>Aufgabe 1 - 1.1</h3>
 
-<br><p>Musikaufnahme</p>
-<audio controls><source src="./audio/musik_mono.wav" type="audio/wav"></audio>
-<p>Bescheibung</p>
-<p>Loesung</p>
+		<br />
+		<p>Musikaufnahme</p>
+		<audio controls>
+			<source src="./audio/musik_mono.wav" type="audio/wav" />
+		</audio>
+		<p>Bescheibung</p>
+		<p>Loesung</p>
 
-<br><h3>Aufgabe 1 - 1.2</h3>
-<p>Loesung</p>
+		<br />
+		<h3>Aufgabe 1 - 1.3</h3>
+		<span>1.2)</span>
+		<span>(c)</span>
+		<p>
+			Beim Abtasttheorem muss die Abtastfrequenz mindestens das
+			doppelte der Signalfrequenz sein. Der Grenzfall muss das doppelte
+			der Signalfrequenz sein, da man sonst mit den Punkten keine
+			richtige Rekonstruktion machen kann. Wenn die Abtastfrequenz
+			kleiner wäre, wäre die rekonstruierte Signalfrequenz tiefer. Der
+			Grenzfall waere bei 4Hz = 2Hz*2
+		</p>
+		<img src="./pics/skizze1.png" alt="sinusskizze" />
+		<br />
+		<span>(d)</span>
+		<p>
+			Um kein Aliasing zu bekommen entfernt man, mit einem
+			Tiefpassfilter, die zu hohen Frequenzen am Anfang. Der
+			Tiefpassfilter filtert alle Frequenzen die größer als die Hälfte
+			der Signalfrequenz sind. Dann kann man den erhaltene Teil
+			spiegeln und rekonstruieren. Dadurch dass wir am Anfang ein
+			Tiefpass gemacht haben entstehen bei der späteren Abtastung keine
+			Aliasing, wodurch es dann keine Verzerrung im Audio gibt.
+		</p>
+		<br />
+                <span>1.3)</span>
+                <span>(a)</span>
+                <p>
+                        <span class="no-list-dot">8 Bit-Auflösung:</span>
+				    <ul>
+                        <li>SNR = 2^8/2 = 128-1</li>
+                        <li>SNR = 127/0,5 = 254</li>
+                        <li>SNR = 20log10(254) = 48,10dB</li>
+				    </ul>
+                        <br />
+				    
+                        <span class="no-list-dot">16 Bit-Auflösung:</span>
+				    <ul>
+                        <li>SNR = 2^16/2 = 32768-1</li>
+                        <li>SNR = 32767/0,5 = 65534</li>
+                        <li>SNR = 20log10(65534) = 96,33dB</li>
+                        </ul>
+                </p>
+                <br />
+                <span>(c)</span>
+                <p>
+                        Bei 8 Bit tritt eine deutlich hörbare Verschlechterung auf.
+                </p>
+                <br />
+		<h3>Aufgabe 2 - 2.1</h3>
+		<br />
+		<p>Rauschen</p>
+		<audio controls>
+			<source src="./audio/rauschen.wav" type="audio/wav" />
+		</audio>
+		<p>Bescheibung</p>
+		<p>Loesung</p>
 
-<br><h3>Aufgabe 2 - 2.1</h3>
-<br><p>Rauschen</p>
-<audio controls><source src="./audio/rauschen.wav" type="audio/wav"></audio>
-<p>Bescheibung</p>
-<p>Loesung</p>
+		<br />
+		<h3>Aufgabe 2 - 2.2</h3>
+		<p>Loesung</p>
 
-<br><h3>Aufgabe 2 - 2.2</h3>
-<p>Loesung</p>
+		<br />
+		<h3>Aufgabe 2 - 2.3</h3>
+		<p>Loesung</p>
 
-<br><h3>Aufgabe 2 - 2.3</h3>
-<p>Loesung</p>
-
-<br><h3>Aufgabe 3 - 3.1</h3>
-<p>Loesung</p>
-
-</body>
+		<br />
+		<h3>Aufgabe 3 - 3.1</h3>
+		<p>Loesung</p>
+	</body>
 </html>
