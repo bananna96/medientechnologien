@@ -18,6 +18,7 @@ img {
 
 .img-wrapper {
 	display: flex;
+	align-items: center;
 }
 
 .img-text {
@@ -30,6 +31,17 @@ table {
 	margin: 0 !important;
 }
 
+/* UEBUNG 1 */
+#sinus-kurve-img {
+	width: 50%;
+}
+
+.u1-list-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+/**/
 #Kontakt {
 	position: absolute;
 	top: 4em;

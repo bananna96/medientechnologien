@@ -6,14 +6,13 @@
 
 	<body class="uebung-body">
 		<iframe
-               title="u-1"
+			title="u-1"
 			src="oben.html"
 			width="100%"
 			height="120"
 			name="IFrame3"
 			id="IFrame3"
-               style="border: none"
-
+			style="border: none"
 		>
 			<p>
 				Ihr Browser kann leider keine eingebe5tteten Frames
@@ -42,11 +41,17 @@
 		<span>(c)</span><br />
 		<div class="img-wrapper">
 			<div class="img-text">
-				<img src="./pics/uebung1/sprache_wav_screenshot.png" alt="sprache_scrennshot"/>
+				<img
+					src="./pics/uebung1/sprache_wav_screenshot.png"
+					alt="sprache_scrennshot"
+				/>
 				<span>Sprache.wav</span>
 			</div>
 			<div class="img-text">
-				<img src="./pics/uebung1/musik_wav_screenshot.png" alt="musik_screenshot"/>
+				<img
+					src="./pics/uebung1/musik_wav_screenshot.png"
+					alt="musik_screenshot"
+				/>
 				<span>Musik.wav</span>
 			</div>
 		</div>
@@ -54,16 +59,22 @@
 		<span>1.2)</span><br />
 		<span>(a)</span><br />
 		<span>(b)</span><br />
-		<span>(c)</span><br />
-		<p>
-			Beim Abtasttheorem muss die Abtastfrequenz mindestens das
-			doppelte der Signalfrequenz sein. Der Grenzfall muss das doppelte
-			der Signalfrequenz sein, da man sonst mit den Punkten keine
-			richtige Rekonstruktion machen kann. Wenn die Abtastfrequenz
-			kleiner wäre, wäre die rekonstruierte Signalfrequenz tiefer. Der
-			Grenzfall waere bei 4Hz = 2Hz*2
-		</p>
-		<img src="./pics/uebung1/skizze1.png" alt="sinusskizze" />
+		<span>(c)</span>
+		<div class="img-wrapper">
+			<p>
+				Beim Abtasttheorem muss die Abtastfrequenz mindestens das
+				doppelte der Signalfrequenz sein. Der Grenzfall muss das
+				doppelte der Signalfrequenz sein, da man sonst mit den
+				Punkten keine richtige Rekonstruktion machen kann. Wenn die
+				Abtastfrequenz kleiner wäre, wäre die rekonstruierte
+				Signalfrequenz tiefer. Der Grenzfall waere bei 4Hz = 2Hz*2
+			</p>
+			<img
+				id="sinus-kurve-img"
+				src="./pics/uebung1/skizze1.png"
+				alt="sinusskizze"
+			/>
+		</div>
 		<br />
 		<span>(d)</span>
 		<p>
@@ -80,32 +91,33 @@
 		<span>(g)</span><br />
 		<span>1.3)</span><br />
 		<span>(a)</span><br />
-                <p>
+		<div class="u1-list-wrapper">
+			<div>
 				<span class="no-list-dot">8 Bit-Auflösung:</span>
 				<ul>
-				<li>SNR = 2^8/2 = 128-1</li>
-				<li>SNR = 127/0,5 = 254</li>
-				<li>SNR = 20log10(254) = 48,10dB</li>
+					<li>SNR = 2^8/2 = 128-1</li>
+					<li>SNR = 127/0,5 = 254</li>
+					<li>SNR = 20log10(254) = 48,10dB</li>
 				</ul>
-				<br />
+			</div>
+			<div>
 				<span class="no-list-dot">16 Bit-Auflösung:</span>
 				<ul>
-				<li>SNR = 2^16/2 = 32768-1</li>
-				<li>SNR = 32767/0,5 = 65534</li>
-				<li>SNR = 20log10(65534) = 96,33dB</li>
+					<li>SNR = 2^16/2 = 32768-1</li>
+					<li>SNR = 32767/0,5 = 65534</li>
+					<li>SNR = 20log10(65534) = 96,33dB</li>
 				</ul>
-                </p>
-                <br />
-                <span>(b)</span><br />
-                <span>(c)</span><br />
-			 <p>
-				Bei 8 Bit tritt eine deutlich hörbare Verschlechterung auf.
-		  	 </p>
-                <span>(d)</span><br />
-                <span>(e)</span><br />
-                <span>(f)</span><br />
+			</div>
+		</div>
+		<br />
+		<span>(b)</span><br />
+		<span>(c)</span><br />
+		<p>Bei 8 Bit tritt eine deutlich hörbare Verschlechterung auf.</p>
+		<span>(d)</span><br />
+		<span>(e)</span><br />
+		<span>(f)</span><br />
 
-                <br />
+		<br />
 		<h3>Aufgabe 2 - 2.1</h3>
 		<br />
 		<p>Rauschen</p>
