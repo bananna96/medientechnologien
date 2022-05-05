@@ -57,6 +57,10 @@ table {
 	justify-content: space-between;
 }
 
+.table-wrapper {
+	margin: 50px 0;
+}
+
 /**/
 #Kontakt {
 	position: absolute;
