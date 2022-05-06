@@ -35,6 +35,12 @@
 
 		<br />
 		<h3>Aufgabe 1 - 1.3</h3>
+		<div>File f = new File("C:/Temp/test.txt");<br />
+			BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f));<br />
+			bufferedWriter.write(readWavFile.sound[i]);<br />
+			bufferedWriter.close();
+		</div>
+		<br />
 		<span>1.1)</span><br />
 		<span>(a)</span><br />
 		<div class="audio-wrapper">
@@ -113,15 +119,26 @@
 				</tr>
 				<tr>
 					<td>Valid Bits</td>
-					<td></td>
+					<td>Zur Speicherung benötigte Bits pro Sample</td>
 				</tr>
 				<tr>
 					<td>Bytes per Sample</td>
-					<td></td>
+					<td>Zur Speicherung benötigte Bytes pro Sample</td>
 				</tr>
 			</table>
 		</div>
 		<span>(d)</span><br />
+		<div>
+			Bitrate
+			<div>
+				<span>Sprache</span>
+				<span>2 x 44100 x 8 = <strong>705.600</strong></span>
+			</div>
+			<div>
+				<span>Musik</span>
+				<span>1 x 8000 x 44,1 = <strong>352.800</strong></span>
+			</div>
+		</div>
 		<span>1.2)</span><br />
 		<span>(a)</span><br />
 		<span>(b)</span><br />
@@ -180,10 +197,14 @@
 		<span>(c)</span><br />
 		<p>Bei 8 Bit tritt eine deutlich hörbare Verschlechterung auf.</p>
 		<span>(d)</span><br />
+		<p>
+			Das Geräusch ist als Rauschen zu erkennen, was natürlich die Klarheit des Signals stört.
+			Zusätzlich ist dieses Störgeräusch besonders gut bei leisen Signalen zu hören.
+		</p>
 		<span>(e)</span><br />
 		<span>(f)</span><br />
 
-		<br />
+		<!-- <br />
 		<h3>Aufgabe 2 - 2.1</h3>
 		<br />
 		<p>Rauschen</p>
@@ -204,5 +225,5 @@
 		<br />
 		<h3>Aufgabe 3 - 3.1</h3>
 		<p>Loesung</p>
-	</body>
+	</body> -->
 </html>
