@@ -222,40 +222,6 @@
 			Aliasing, wodurch es dann keine Verzerrung im Audio gibt.
 		</p>
 		<span>(e)</span><br />
-		<span>(f)</span><br />
-		<span>(g)</span><br />
-		<br />
-		<br />
-		<span>3)</span><br />
-		<span>(a)</span><br />
-		<div class="u1-list-wrapper">
-			<div>
-				<span class="no-list-dot">8 Bit-Auflösung:</span>
-				<ul>
-					<li>SNR = 2^8/2 = 128-1</li>
-					<li>SNR = 127/0,5 = 254</li>
-					<li>SNR = 20log10(254) = 48,10dB</li>
-				</ul>
-			</div>
-			<div>
-				<span class="no-list-dot">16 Bit-Auflösung:</span>
-				<ul>
-					<li>SNR = 2^16/2 = 32768-1</li>
-					<li>SNR = 32767/0,5 = 65534</li>
-					<li>SNR = 20log10(65534) = 96,33dB</li>
-				</ul>
-			</div>
-		</div>
-		<br />
-		<span>(b)</span><br />
-		<span>(c)</span><br />
-		<p>Bei 8 Bit tritt eine deutlich hörbare Verschlechterung auf.</p>
-		<span>(d)</span><br />
-		<p>
-			Das Geräusch ist als Rauschen zu erkennen, was natürlich die Klarheit des Signals stört.
-			Zusätzlich ist dieses Störgeräusch besonders gut bei leisen Signalen zu hören.
-		</p>
-		<span>(e)</span><br />
 		<div class="img-wrapper">
 			<div class="img-text">
 				<span> Ueberschreiben jedes zweiten Samples im Array um am ende ein Array mit der Haelfte an Samples zu erhalten:</span>
@@ -297,6 +263,7 @@
 		</div>
 		<span> kann eindeutig erkennen dass nach dem Downsampling jedes zweite Sample fehlt.</span>
 		</div>
+	
 		<span>(f)</span>
 		<br />
 		<br />
@@ -322,6 +289,105 @@
 			Das liegt daran, dass wir die Haelfte der Samples weggeworfen haben. 		<br />
 			An die Stelle der verworfenen Samples haben wir die Samples der zweiten Haelfte gesetzt.<br />
 			Dadurch lauft die Datei in der Haelfte des Zeit ab. Gleichzeitig erhoeht sich dadurch die Frequenz da wir in der Haelfte der Zeit genauso viele Schwingungen haben.<br />
+		</div>
+		<br />
+		<br />
+		<span>3)</span><br />
+		<span>(a)</span><br />
+		<div class="u1-list-wrapper">
+			<div>
+				<span class="no-list-dot">8 Bit-Auflösung:</span>
+				<ul>
+					<li>SNR = 2^8/2 = 128-1</li>
+					<li>SNR = 127/0,5 = 254</li>
+					<li>SNR = 20log10(254) = 48,10dB</li>
+				</ul>
+			</div>
+			<div>
+				<span class="no-list-dot">16 Bit-Auflösung:</span>
+				<ul>
+					<li>SNR = 2^16/2 = 32768-1</li>
+					<li>SNR = 32767/0,5 = 65534</li>
+					<li>SNR = 20log10(65534) = 96,33dB</li>
+				</ul>
+			</div>
+		</div>
+		<br />
+		<span>(b)</span><br />
+		<div>
+			<img
+			class="img-rounded-small"
+			src="./pics/uebung1/bitred_code.png"
+			alt="musik_screenshot"
+		/>
+		</div>
+		<span>(c)</span><br />
+		<p>Bei 8 Bit kann man eine verschlechterung wahrnehmen. Sowohl bei der Sprache als auch bei der Musik ist ein leichtes rauschen zu hoeren.</p>
+		<div class="audio-wrapper">
+			<div class="audio-text-wrapper">
+				<span>Sprache</span>
+				<audio controls>
+					<source
+						src="./audio/uebung1/sprache_ClaudiusAnna_bitred.wav"
+						type="audio/wav"
+					/>
+				</audio>
+			</div>
+			<div class="audio-text-wrapper">
+				<span>Musik</span>
+				<audio controls>
+					<source
+						src="./audio/uebung1/musik_ClaudiusAnna_bitred.wav"
+						type="audio/wav"
+					/>
+				</audio>
+			</div>
+		</div>
+		<span>(d)</span><br />
+		<p>
+			Bei einer reduzierung von 8 Bit hoert man ein leichtes rauschen, reduziert man die Anzahl der Bits weiter wird das rauschen immer praesenter und vorallem bei der Musik ist sind ab einer Bitreduzierung von 12 Bit sehr viele unschoene Nebengerausche zu hoeren was das Klangbild zerstoert.
+		</p>
+		<div class="audio-text-wrapper">
+			<span></span>
+			<audio controls>
+				<source
+					src="./audio/uebung1/musik_ClaudiusAnna_bitred12.wav"
+					type="audio/wav"
+				/>
+			</audio>
+		</div>
+		<span>(e)</span><br />
+		<div>
+			<img
+			class="img-rounded-small"
+			src="./pics/uebung1/bitred12_code.png"
+			alt="musik_screenshot"
+		/>
+		</div>
+		<span>(f)</span><br />
+		<p>Das rauschen ist angepasst an die Frequenz der original Wav Datei.<br />
+			Da die Musikdatei hoehere Frequenzen enthaelt ist auch das Rauschen ein hoeher frequentisches Rauschen. <br />
+			 Bei der Sprachdatei die eine niedrigere Frequenz hat ist das rauschen auch tiefer. <br />
+			 Mit steigender Bitreduzierung hoert man auch mehr der Urspruenglichen Musik/Sprache raus die mitrausgefilter wurde.</p>
+		<div class="audio-wrapper">
+			<div class="audio-text-wrapper">
+				<span>Sprache</span>
+				<audio controls>
+					<source
+						src="./audio/uebung1/sprache_ClaudiusAnna_diff.wav"
+						type="audio/wav"
+					/>
+				</audio>
+			</div>
+			<div class="audio-text-wrapper">
+				<span>Musik</span>
+				<audio controls>
+					<source
+						src="./audio/uebung1/musik_ClaudiusAnna_diff.wav"
+						type="audio/wav"
+					/>
+				</audio>
+			</div>
 		</div>
 		<br />
 		<br />
