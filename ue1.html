@@ -141,7 +141,65 @@
 		</div>
 		<span>1.2)</span><br />
 		<span>(a)</span><br />
+		<div class="img-wrapper">
+			<div class="img-text">
+				<span> Ausgabe in Datei sine_hi01</span>
+
+				<img
+					class="img-rounded"
+					src="./pics/uebung1/ausgabe_sine_hi01.png"
+					alt="sprache_scrennshot"
+				/>
+			</div>
+			<div class="img-text">
+				<span> Ausgabe in Datei sine_lo03</span>
+
+				<img
+					class="img-rounded"
+					src="./pics/uebung1/ausgabe_sine_lo03.png"
+					alt="musik_screenshot"
+				/>
+			</div>
+		</div>
+		<div>
+			Frequenz = 16 kHz = 16.000 Hz <br />
+
+			Um die Frequenz abzulesen muss man die Amplitude ermitteln.<br />
+			16.300 ist ca der groesste Wert und muss daher die Amplitude sein.<br />
+			Jeder Wert in der Datei ist ein Sample also ist die Schwingungsdauer von einer Amplitude zur naechsten.<br />
+			Da das Sample 10.394 zweimal hintereinander folgt ist davon auszugehen, dass die Amplitude genau zwischen diesen beiden Werten liegt.<br />
+			Zaehlt man nun die Samles von einer zur naechsten Amplitude kommt man auf 3,5.<br />
+			16.000 / 3,5 = 4571 <br />
+			Damit liegt die Frequenz der sine_hi01 bei ca. 4,5 kHz.<br />
+
+			Das ganze Analog zur sine_lo03:<br />
+
+			Von Sample 16.000 bis 16.000 zaehlt man 5 Samples.<br />
+			16.000 / 5 = 3.200<br />
+			Damit liegt die Frequenz der sine_hi03 bei ca 3.200 kHz.<br />
+
+		</div>
+		<br />
 		<span>(b)</span><br />
+		<div class="img-wrapper">
+			<div class="img-text">
+				<img
+					class="img-rounded"
+					src="./pics/uebung1/spektral_analyse_sine_hi01.png"
+					alt="sprache_scrennshot"
+				/>
+				<span> Wie ausgerechnet ca. 4.500 Hz</span>
+
+			</div>
+			<div class="img-text">
+				<img
+					class="img-rounded"
+					src="./pics/uebung1/spektral_analyse_sine_lo03.png"
+					alt="musik_screenshot"
+				/>
+				<span> Abweichung von 200 Hz zur Berechnung</span>
+			</div>
+		</div>
 		<span>(c)</span>
 		<div class="img-wrapper">
 			<p>
@@ -202,8 +260,72 @@
 			Zusätzlich ist dieses Störgeräusch besonders gut bei leisen Signalen zu hören.
 		</p>
 		<span>(e)</span><br />
-		<span>(f)</span><br />
+		<div class="img-wrapper">
+			<div class="img-text">
+				<span> Ueberschreiben jedes zweiten Samples im Array um am ende ein Array mit der Haelfte an Samples zu erhalten:</span>
+				<img
+					class="img-rounded"
+					src="./pics/uebung1/2e_01.png"
+					alt="sprache_scrennshot"
+				/>
+			</div>
+			<div class="img-text">
+				<span> Anpassen der Frames im Header (/2) (samples passt sich automatisch an)</span>
+				<img
+					class="img-rounded"
+					src="./pics/uebung1/2e_02.png"
+					alt="musik_screenshot"
+				/>
+			</div>
+		</div>
+		<br />
+		<br />
+		<div>
+		<div class="img-wrapper">
+			<div class="img-text">
+				<span> sine_lo03 vor dem Downsampling:</span>
+				<img
+					class="img-rounded"
+					src="./pics/uebung1/sine_lo03_before.png"
+					alt="sprache_scrennshot"
+				/>
+			</div>
+			<div class="img-text">
+				<span> sine_lo03 nach dem Downsampling:</span>
+				<img
+					class="img-rounded"
+					src="./pics/uebung1/sine_lo03_after.png"
+					alt="musik_screenshot"
+				/>
+			</div>
+		</div>
+		<span> kann eindeutig erkennen dass nach dem Downsampling jedes zweite Sample fehlt.</span>
+		</div>
+		<span>(f)</span>
+		<br />
+		<br />
+		<div>
+			<div class="img-text">
+				<div>
+					<span> sine_hi01 hat sich durchs Downsampling auf 7000 Hz geandert</span><br />
+					<span> sine_lo03 hat sich durchs Downsampling auf 6000 Hz geandert</span>
 
+				</div>
+				<img
+					class="img-rounded"
+					src="./pics/uebung1/downsampling_changes.png"
+					alt="musik_screenshot"
+				/>
+			</div>
+		</div>
+		<br />
+		<br />
+		<span>(g)</span>
+		<div>
+			Die Sprachdatei hoert sich nach dem Downsampling hoeher und schneller an. <br />
+			Das liegt daran, dass wir die Haelfte der Samples weggeworfen haben. An die Stelle der verworfenen Samples haben wir die Samples der zweiten Haelfte gesetzt.<br />
+			Dadurch lauft die Datei in der Haelfte des Zeit ab. Gleichzeitig erhoeht sich dadurch die Frequenz da wir in der Haelfte der Zeit genauso viele Schwingungen haben.<br />
+		</div>
 		<!-- <br />
 		<h3>Aufgabe 2 - 2.1</h3>
 		<br />
