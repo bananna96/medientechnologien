@@ -37,6 +37,11 @@ table {
 	border-radius: 25px;
 }
 
+.img-rounded-small {
+	border-radius: 25px;
+	width: 50%;
+}
+
 .audio-wrapper {
 	display: flex;
 	justify-content: space-around;
